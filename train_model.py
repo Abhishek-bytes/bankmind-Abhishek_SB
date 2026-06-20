@@ -854,8 +854,6 @@ def main():
     print()
     print("Next steps:")
     print("  1. View Streamlit dashboard: streamlit run streamlit_app.py")
-    print("  2. Run FastAPI service:     uvicorn app.main:app --reload")
-    print("  3. Read EXPLANATION.md for detailed insights & methodology")
     print()
 
 
