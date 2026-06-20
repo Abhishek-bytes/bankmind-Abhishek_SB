@@ -30,7 +30,7 @@ bankmind-abhishek/
 
 ### 1. Clone & install
 ```bash
-git clone https://github.com/Abhishek-bytes/bankmind--Abhishek_SB-.git
+git clone https://github.com/Abhishek-bytes/bankmind-Abhishek_SB.git
 cd bankmind--Abhishek_SB-
 python3 -m venv venv
 source venv/bin/activate        # Windows: venv\Scripts\activate
@@ -43,7 +43,6 @@ python train_model.py
 ```
 Runs EDA, trains 6 models (Logistic Regression, Random Forest, Extra Trees, Gradient Boosting, Voting, Stacking), prints evaluation metrics, and saves the best pipeline to `model/bankmind_model.pkl`.
 
-Expected runtime: ~5–10 minutes.
 
 ### 3. Launch the dashboard
 ```bash
