@@ -1,4 +1,4 @@
-# EXPLANATION.md — Track B/C (ML Engineer + System Builder)
+# EXPLANATION.md — Track B (ML Engineer )
 
 > 🚀 **Live Streamlit Demo** — run `streamlit run streamlit_app.py` locally, or deploy to
 > [Streamlit Cloud](https://share.streamlit.io) for a public link (see README for instructions).
@@ -117,38 +117,6 @@ of human behavior that profile data alone can't capture (was this customer
 in the market for a term deposit *right now*, did they have other plans for
 that balance, did they just dislike the offer?). A near-50/50 miss like this
 one is the model behaving correctly given the limits of what it was fed.
-
-## Track C questions
-
-### 6. What would break first with 200 RMs hitting `/predict` simultaneously? What would you change?
-
-The model itself loads once at startup and inference is fast (a single
-Random Forest prediction on 8 features), so raw compute isn't the
-bottleneck. What would break first is **Uvicorn running as a single
-worker process** — by default this app runs synchronously on one process,
-so 200 concurrent requests queue up behind whichever one is currently
-executing instead of running in parallel. The fix I'd reach for first is
-the simplest one: run with multiple Uvicorn/Gunicorn workers
-(`uvicorn app.main:app --workers 4`) behind a load balancer, since the
-model is read-only and stateless across requests, so workers don't need
-to share any mutable state. If traffic grew well past that, the next
-thing I'd change is moving model loading out of each worker's memory into
-a shared inference service, so we're not loading the same model pickle
-four-to-eight times over.
-
-### 7. What does the LLM explanation actually add over just showing a probability score?
-
-A probability score tells an RM *how confident* the model is, but not
-*what to say*. `"62% probability"` doesn't help someone walk into a
-conversation — `"this customer has a healthy balance and no competing
-loan obligations, so lead with how a term deposit grows idle savings
-safely"` does. The Groq-powered `/explain` endpoint translates a number
-into the kind of reasoning a human would actually use to open a
-conversation, in the customer's specific context (their job, their
-balance, their existing loans) rather than a generic pitch. That's the
-real product gap between "a model that scores leads" and "a tool an RM
-actually wants to use before every call" — and it's exactly why the
-challenge brief calls this one of the core features of the real project.
 
 ---
 

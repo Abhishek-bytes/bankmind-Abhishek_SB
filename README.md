@@ -10,15 +10,6 @@ to a term deposit, built for the **BankMind Challenge (Omdena)**.
 
 ## 🚀 Live Demo
 
-> **Streamlit Cloud deployment** — push to GitHub, then connect at
-> [share.streamlit.io](https://share.streamlit.io) (set main file to `streamlit_app.py`).
-> Drop the live link in this README once deployed.
-
-**Local Streamlit** (fastest way to explore the model):
-```bash
-streamlit run streamlit_app.py
-```
-Opens at `http://localhost:8501` — 4 tabs: Predict · Leaderboard · Feature Importance · About.
 
 ## What's in here
 
@@ -27,12 +18,10 @@ bankmind-abhishek/
 ├── data/
 │   └── bank-full.csv              # UCI Bank Marketing dataset (45,211 rows)
 ├── train_model.py                 # EDA + 6-model ensemble training + evaluation
-├── streamlit_app.py               # ← Streamlit deployment UI (Track B/C showcase)
+├── pp.py                          # ← Streamlit deployment UI (Track B showcase)
 ├── model/
 │   ├── bankmind_model.pkl         # saved best pipeline (created by train_model.py)
 │   └── metrics_summary.json       # all-model metrics (created by train_model.py)
-├── app/
-│   └── main.py                    # FastAPI service (Track C, 3 endpoints)
 ├── notebooks/
 │   └── bankmind_walkthrough.ipynb # end-to-end notebook with SHAP section
 ├── requirements.txt

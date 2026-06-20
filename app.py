@@ -1,16 +1,3 @@
-"""
-streamlit_app.py
-================
-BankMind — Customer Subscription Predictor
-Streamlit deployment UI for the Track B model.
-
-Run locally:
-    streamlit run streamlit_app.py
-
-Deploy to Streamlit Cloud:
-    Push this repo to GitHub, connect at https://share.streamlit.io
-    Set the main file to streamlit_app.py
-"""
 
 from __future__ import annotations
 
@@ -707,7 +694,7 @@ with tab_about:
     st.divider()
     st.markdown(
         "<p style='color:#475569;text-align:center;font-size:0.82rem;'>"
-        "BankMind · Track B/C · Omdena · 2026 · "
+        "BankMind · Track B · Omdena · 2026 · "
         "<a href='https://github.com' style='color:#0066ff;font-weight:700;'>GitHub</a>"
         "</p>",
         unsafe_allow_html=True,
