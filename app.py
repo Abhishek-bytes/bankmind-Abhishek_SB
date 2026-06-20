@@ -694,8 +694,8 @@ with tab_about:
     st.divider()
     st.markdown(
         "<p style='color:#475569;text-align:center;font-size:0.82rem;'>"
-        "BankMind · Track B · Omdena · 2026 · "
-        "<a href='https://github.com' style='color:#0066ff;font-weight:700;'>GitHub</a>"
+        "BankMind · Track B · Omdena VIT Bhopal · 2026 · "
+        "<a href='https://github.com/Abhishek-bytes/bankmind-Abhishek_SB' style='color:#0066ff;font-weight:700;'>GitHub</a>"
         "</p>",
         unsafe_allow_html=True,
     )

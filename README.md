@@ -5,6 +5,7 @@ A machine-learning system that predicts whether a bank customer is likely to sub
 - **Track B** — ML Engineer: EDA → model comparison → evaluation → `EXPLANATION.md`
 
 # Live Deployment Link 
+ https://bankmind-abhishek.streamlit.app/
 
 ## What's in here
 
@@ -24,14 +25,6 @@ bankmind-abhishek/
 └── README.md
 ```
 
-## A design decision worth flagging up front
-
-The raw dataset has campaign-contact columns: `duration`, `campaign`, `pdays`, `previous`, `poutcome`, `contact`, `day`, `month`. **None of these are used by the deployed model.**
-
-1. **Leakage.** `duration` is the length of the sales call itself — known only *after* the call happens, so a model that depends on it can't actually decide who to call.
-2. **The business problem.** This is meant to be a pre-contact recommender, so the model only uses information available *before* any contact: `age`, `job`, `marital`, `education`, `default`, `balance`, `housing`, `loan`.
-
-This makes recall/precision more modest than including `duration` would — that's the realistic trade-off, not a bug. See `EXPLANATION.md` (Q3, Q4) for more.
 
 ## 🏃 How to Run (Local)
 
