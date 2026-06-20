@@ -31,7 +31,7 @@ bankmind-abhishek/
 ### 1. Clone & install
 ```bash
 git clone https://github.com/Abhishek-bytes/bankmind-Abhishek_SB.git
-cd bankmind--Abhishek_SB-
+cd bankmind-Abhishek_SB
 python3 -m venv venv
 source venv/bin/activate        # Windows: venv\Scripts\activate
 pip install -r requirements.txt
