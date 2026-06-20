@@ -32,8 +32,6 @@ bankmind-abhishek/
 ```bash
 git clone https://github.com/Abhishek-bytes/bankmind-Abhishek_SB.git
 cd bankmind-Abhishek_SB
-python3 -m venv venv
-source venv/bin/activate        # Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
@@ -46,7 +44,7 @@ Runs EDA, trains 6 models (Logistic Regression, Random Forest, Extra Trees, Grad
 
 ### 3. Launch the dashboard
 ```bash
-streamlit run app.py
+python -m streamlit run app.py
 ```
 Opens `http://localhost:8501` with prediction, leaderboard, feature importance, and about tabs.
 
