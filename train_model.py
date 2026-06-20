@@ -56,7 +56,7 @@ Usage:
     
 Output:
     • Console: detailed EDA, training logs, evaluation metrics, sample predictions
-    • model/bankmind_model.pkl: fitted pipeline + metadata (loaded by Streamlit + FastAPI)
+    • model/bankmind_model.pkl: fitted pipeline + metadata (loaded by Streamlit )
     • model/metrics_summary.json: human-readable metrics for dashboards
 """
 
