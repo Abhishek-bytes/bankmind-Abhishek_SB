@@ -1,6 +1,6 @@
 # 🏦 BankMind — Customer Subscription Predictor
 
-A machine-learning system that predicts whether a bank customer is likely to subscribe to a term deposit, built for the **BankMind Challenge (Omdena)**.
+A machine-learning system that predicts whether a bank customer is likely to subscribe to different products , built for the **BankMind Challenge (Omdena)**.
 
 - **Track B** — ML Engineer: EDA → model comparison → evaluation → `EXPLANATION.md`
 
