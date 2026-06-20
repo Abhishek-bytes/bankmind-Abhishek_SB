@@ -21,7 +21,7 @@ bankmind-abhishek/
 ├── notebooks/
 │   └── bankmind_walkthrough.ipynb # end-to-end notebook with SHAP section
 ├── requirements.txt
-├── EXPLANATION.md                 # required answers for Track B/C graders
+├── EXPLANATION.md                 # required answers for Track B graders
 └── README.md
 ```
 
