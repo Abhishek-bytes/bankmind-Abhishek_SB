@@ -1,12 +1,9 @@
 # 🏦 BankMind — Customer Subscription Predictor
-
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io)
-
 A machine-learning system that predicts whether a bank customer is likely to subscribe
 to a term deposit, built for the **BankMind Challenge (Omdena)**.
 
 - **Track B** — ML Engineer: EDA → model comparison → evaluation → EXPLANATION.md
-- **Track C** — System Builder: FastAPI service + Streamlit deployment UI + Groq explanation
+
 
 ## 🚀 Live Demo
 
@@ -18,7 +15,7 @@ bankmind-abhishek/
 ├── data/
 │   └── bank-full.csv              # UCI Bank Marketing dataset (45,211 rows)
 ├── train_model.py                 # EDA + 6-model ensemble training + evaluation
-├── pp.py                          # ← Streamlit deployment UI (Track B showcase)
+├── app.py                          # ← Streamlit deployment UI (Track B showcase)
 ├── model/
 │   ├── bankmind_model.pkl         # saved best pipeline (created by train_model.py)
 │   └── metrics_summary.json       # all-model metrics (created by train_model.py)
