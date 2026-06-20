@@ -1,0 +1,59 @@
+{
+  "model_name": "Random Forest",
+  "metrics": {
+    "Logistic Regression": {
+      "accuracy": 0.6224,
+      "precision": 0.18,
+      "recall": 0.6267,
+      "f1": 0.2797
+    },
+    "Random Forest": {
+      "accuracy": 0.7141,
+      "precision": 0.2223,
+      "recall": 0.5775,
+      "f1": 0.321
+    },
+    "Extra Trees": {
+      "accuracy": 0.6568,
+      "precision": 0.1933,
+      "recall": 0.6096,
+      "f1": 0.2936
+    },
+    "Gradient Boosting": {
+      "accuracy": 0.7009,
+      "precision": 0.2142,
+      "recall": 0.5832,
+      "f1": 0.3133
+    },
+    "Voting Ensemble": {
+      "accuracy": 0.6988,
+      "precision": 0.2147,
+      "recall": 0.5926,
+      "f1": 0.3152
+    },
+    "Stacking Ensemble": {
+      "accuracy": 0.6994,
+      "precision": 0.2161,
+      "recall": 0.5974,
+      "f1": 0.3174
+    }
+  },
+  "reference_stats": {
+    "balance_median": 448.0,
+    "balance_q75": 1428.0,
+    "balance_q25": 72.0,
+    "age_median": 39.0
+  },
+  "ensemble_strategy": {
+    "base_learners": [
+      "Random Forest",
+      "Extra Trees",
+      "Gradient Boosting"
+    ],
+    "ensemble_methods": [
+      "Soft Voting",
+      "Stacking (LR meta, cv=5)"
+    ],
+    "class_imbalance_handling": "class_weight='balanced' on all base learners"
+  }
+}
